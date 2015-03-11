@@ -2,11 +2,8 @@
 
 import os
 import logging
+from configuration import *
 
-download_cmd = 	"wget --timestamping ftp://hgdownload.cse.ucsc.edu/goldenPath/{0}/chromosomes/chr{1}.fa.gz -O {2}_chr{3}.fa.gz"
-
-species_url_path = {'human':'hg19', 'mouse': 'mm10'}
-species_cnt = {'human':22, 'mouse': 19}
 
 def download_fa_file(species, chr_id):
 	logging.info("download_fa_file: {0}, {1}".format(species, chr_id))
